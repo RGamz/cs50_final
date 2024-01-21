@@ -1,0 +1,1 @@
+	This is my CS50 final project that will show everyday statistics of after-sales ticket treatment by admins on a daily basis. The goal is to track the efficiency and the current load on the admins and to be able to react fast.
