@@ -1,0 +1,154 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Statistiques du jour
+{% endblock %}
+
+    <main>
+      {% block main %}
+      <form action="/index" method="post">
+        <section>
+          <h1>Statistiques du jour</h1>
+
+          <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th class="text-start">Agent</th>
+                    <th class="text-end">Contrat</th>
+                    <th class="text-end">Nombre des tickets le matin</th>
+                    <th class="text-end">Nombre des tickets le soir</th>
+                    <th class="text-end">Difference</th>
+                </tr>
+            </thead>
+          <tbody>
+
+                    <tr>
+                        <td class="text-start">Vérification</td>
+                        <td class="text-end">
+                          <ul>
+                            <li>Feider</li>
+                            <li>Autres contrats</li>
+                          </ul>
+                        </td>
+                        <td class="text-end">
+                          <ul>
+                            <li>{{ verif_feider }}</li>
+                            <li>{{ verif_others }}</li>
+                          </ul>
+                        </td>
+                        <td class="text-end">
+                          <ul>
+                            <li>0</li>
+                            <li>0</li>
+                          </ul>
+                        </td>
+                        <td class="text-end">
+                          <ul>
+                            <li>0</li>
+                            <li>0</li>
+                          </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                      <td class="text-start">Administratif</td>
+                      <td class="text-end">
+                        <ul>
+                          <li>Feider</li>
+                          <li>Autres contrats</li>
+                        </ul>
+                      </td>
+                      <td class="text-end">
+                        <ul>
+                          <li>{{ admin_feider }}</li>
+                          <li>{{ admin_others }}</li>
+                        </ul>
+                      </td>
+                      <td class="text-end">
+                        <ul>
+                          <li>0</li>
+                          <li>0</li>
+                        </ul>
+                      </td>
+                      <td class="text-end">
+                        <ul>
+                          <li>0</li>
+                          <li>0</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-start">Technique</td>
+                      <td class="text-end">
+                        <ul>
+                          <li>Feider</li>
+                          <li>Autres contrats</li>
+                        </ul>
+                      </td>
+                      <td class="text-end">
+                        <ul>
+                          <li>{{ tech_feider }}</li>
+                          <li>{{ tech_others }}</li>
+                        </ul>
+                      </td>
+                      <td class="text-end">
+                        <ul>
+                          <li>0</li>
+                          <li>0</li>
+                        </ul>
+                      </td>
+                      <td class="text-end">
+                        <ul>
+                          <li>0</li>
+                          <li>0</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-start">Pièces</td>
+                      <td class="text-end">
+                        <ul>
+                          <li>Feider</li>
+                          <li>Autres contrats</li>
+                        </ul>
+                      </td>
+                      <td class="text-end">
+                        <ul>
+                          <li>0</li>
+                          <li>0</li>
+                        </ul>
+                      </td>
+                      <td class="text-end">
+                        <ul>
+                          <li>0</li>
+                          <li>0</li>
+                        </ul>
+                      </td>
+                      <td class="text-end">
+                        <ul>
+                          <li>0</li>
+                          <li>0</li>
+                        </ul>
+                      </td>
+                    </tr>
+
+            </tbody>
+            <tfoot>
+              <tr>
+                  <td class="border-0 fw-bold text-start" colspan="1">Total global</td>
+                  <td class="border-0 text-end"></td>
+                  <td class="border-0 text-end">{{ total_tickets }}</td>
+                  <td class="border-0 text-end">0</td>
+                  <td class="border-0 text-end">0</td>
+              </tr>
+              <tr>
+                <td class="border-0 fw-bold text-start" colspan="1">Nombre de tickets crées</td>
+                <td class="border-0 text-end" colspan="4">0</td>
+              </tr>
+
+          </tfoot>
+
+          </table>
+        </section>
+      {% endblock %}
+    </main>
+
