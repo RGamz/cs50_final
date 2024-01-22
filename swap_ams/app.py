@@ -8,10 +8,12 @@ app = Flask(__name__)
 def index():
 
     # read the morning file
-    dfMorning = pd.read_csv("D:/Code/CS50_Final/swap_ams/db/morning.csv", sep=",")
+    # dfMorning = pd.read_csv("D:/Code/CS50_Final/swap_ams/db/morning.csv", sep=",")
+    dfMorning = pd.read_csv("/home/gamz/Code/SWAP/cs50_final/swap_ams/db/morning.csv", sep=",")
 
     # read the evening file
-    dfEvening = pd.read_csv("D:/Code/CS50_Final/swap_ams/db/evening.csv", sep=",")
+    # dfEvening = pd.read_csv("D:/Code/CS50_Final/swap_ams/db/evening.csv", sep=",")
+    dfEvening = pd.read_csv("/home/gamz/Code/SWAP/cs50_final/swap_ams/db/evening.csv", sep=",")
 
     # show all tickets that are not admin closure and not removed
     total_tickets_morning = len(dfMorning[(dfMorning["is_admin_closure"] == 0) & (dfMorning["is_removed"] == 0)])
