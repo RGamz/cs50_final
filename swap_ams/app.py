@@ -16,101 +16,69 @@ def index():
     dfEvening = pd.read_csv("/home/gamz/Code/SWAP/cs50_final/swap_ams/db/evening.csv", sep=",")
 
     # show all tickets that are not admin closure and not removed
-    total_tickets_morning = len(dfMorning[(dfMorning["is_admin_closure"] == 0) & (dfMorning["is_removed"] == 0)])
-    total_tickets_evening = len(dfEvening[(dfEvening["is_admin_closure"] == 0) & (dfEvening["is_removed"] == 0)])
+    total_tickets_morning = len(dfMorning)
+    total_tickets_evening = len(dfEvening)
 
     # agents verif
     verif_feider_morning = len(dfMorning[(dfMorning["pseudo"]=="03 - Agent Vérification SWAP") 
-                          & (dfMorning["contrat"] == "BUILDER / TCK") 
-                          & (dfMorning["is_admin_closure"] == 0) 
-                          & (dfMorning["is_removed"] == 0)])
+                          & (dfMorning["marque"] == "FEIDER")])
     
-    verif_all_morning = len(dfMorning[(dfMorning["pseudo"]=="03 - Agent Vérification SWAP") 
-                       & (dfMorning["is_admin_closure"] == 0) 
-                       & (dfMorning["is_removed"] == 0)])
+    verif_all_morning = len(dfMorning[(dfMorning["pseudo"]=="03 - Agent Vérification SWAP")])
     
     verif_others_morning = verif_all_morning - verif_feider_morning
 
     verif_feider_evening = len(dfEvening[(dfEvening["pseudo"]=="03 - Agent Vérification SWAP") 
-                          & (dfEvening["contrat"] == "BUILDER / TCK") 
-                          & (dfEvening["is_admin_closure"] == 0) 
-                          & (dfEvening["is_removed"] == 0)])
+                          & (dfEvening["marque"] == "FEIDER")])
     
-    verif_all_evening = len(dfEvening[(dfEvening["pseudo"]=="03 - Agent Vérification SWAP") 
-                       & (dfEvening["is_admin_closure"] == 0) 
-                       & (dfEvening["is_removed"] == 0)])
+    verif_all_evening = len(dfEvening[(dfEvening["pseudo"]=="03 - Agent Vérification SWAP")])
     
     verif_others_evening = verif_all_evening - verif_feider_evening
 
 
     # agents admin
     admin_feider_morning = len(dfMorning[(dfMorning["pseudo"]=="02 - Agent Administratif SWAP") 
-                          & (dfMorning["contrat"] == "BUILDER / TCK") 
-                          & (dfMorning["is_admin_closure"] == 0) 
-                          & (dfMorning["is_removed"] == 0)])
+                          & (dfMorning["marque"] == "FEIDER")])
     
-    admin_all_morning = len(dfMorning[(dfMorning["pseudo"]=="02 - Agent Administratif SWAP") 
-                       & (dfMorning["is_admin_closure"] == 0) 
-                       & (dfMorning["is_removed"] == 0)])
+    admin_all_morning = len(dfMorning[(dfMorning["pseudo"]=="02 - Agent Administratif SWAP")])
     
     admin_others_morning = admin_all_morning - admin_feider_morning
 
     admin_feider_evening = len(dfEvening[(dfEvening["pseudo"]=="02 - Agent Administratif SWAP") 
-                          & (dfEvening["contrat"] == "BUILDER / TCK") 
-                          & (dfEvening["is_admin_closure"] == 0) 
-                          & (dfEvening["is_removed"] == 0)])
+                          & (dfEvening["marque"] == "FEIDER")])
     
-    admin_all_evening = len(dfEvening[(dfEvening["pseudo"]=="02 - Agent Administratif SWAP") 
-                       & (dfEvening["is_admin_closure"] == 0) 
-                       & (dfEvening["is_removed"] == 0)])
+    admin_all_evening = len(dfEvening[(dfEvening["pseudo"]=="02 - Agent Administratif SWAP")])
     
     admin_others_evening = admin_all_evening - admin_feider_evening
 
 
     # agents tech
     tech_feider_morning  = len(dfMorning[(dfMorning["pseudo"]=="01 - Agent Technique SWAP") 
-                         & (dfMorning["contrat"] == "BUILDER / TCK") 
-                         & (dfMorning["is_admin_closure"] == 0) 
-                         & (dfMorning["is_removed"] == 0)])
+                         & (dfMorning["marque"] == "FEIDER")])
     
-    tech_all_morning = len(dfMorning[(dfMorning["pseudo"]=="01 - Agent Technique SWAP") 
-                      & (dfMorning["is_admin_closure"] == 0) 
-                      & (dfMorning["is_removed"] == 0)])
+    tech_all_morning = len(dfMorning[(dfMorning["pseudo"]=="01 - Agent Technique SWAP")])
     
     tech_others_morning = tech_all_morning - tech_feider_morning
 
     tech_feider_evening  = len(dfEvening[(dfEvening["pseudo"]=="01 - Agent Technique SWAP") 
-                         & (dfEvening["contrat"] == "BUILDER / TCK") 
-                         & (dfEvening["is_admin_closure"] == 0) 
-                         & (dfEvening["is_removed"] == 0)])
+                         & (dfEvening["marque"] == "FEIDER")])
     
-    tech_all_evening = len(dfEvening[(dfEvening["pseudo"]=="01 - Agent Technique SWAP") 
-                      & (dfEvening["is_admin_closure"] == 0) 
-                      & (dfEvening["is_removed"] == 0)])
+    tech_all_evening = len(dfEvening[(dfEvening["pseudo"]=="01 - Agent Technique SWAP")])
     
     tech_others_evening = tech_all_evening - tech_feider_evening
 
 
     # agent pieces
     pieces_feider_morning = len(dfMorning[(dfMorning["pseudo"]=="04 - Agent Pièces SWAP") 
-                           & (dfMorning["contrat"] == "BUILDER / TCK") 
-                           & (dfMorning["is_admin_closure"] == 0) 
-                           & (dfMorning["is_removed"] == 0)])
+                           & (dfMorning["marque"] == "FEIDER")])
     
-    pieces_all_morning = len(dfMorning[(dfMorning["pseudo"]=="04 - Agent Pièces SWAP") 
-                        & (dfMorning["is_admin_closure"] == 0) 
-                        & (dfMorning["is_removed"] == 0)])
+    pieces_all_morning = len(dfMorning[(dfMorning["pseudo"]=="04 - Agent Pièces SWAP")])
     
     pieces_others = pieces_all_morning - pieces_feider_morning
 
     pieces_feider_evening = len(dfEvening[(dfEvening["pseudo"]=="04 - Agent Pièces SWAP") 
-                           & (dfEvening["contrat"] == "BUILDER / TCK") 
-                           & (dfEvening["is_admin_closure"] == 0) 
-                           & (dfEvening["is_removed"] == 0)])
+                           & (dfEvening["marque"] == "FEIDER")])
     
-    pieces_all_evening = len(dfEvening[(dfEvening["pseudo"]=="04 - Agent Pièces SWAP") 
-                        & (dfEvening["is_admin_closure"] == 0) 
-                        & (dfEvening["is_removed"] == 0)])
+    pieces_all_evening = len(dfEvening[(dfEvening["pseudo"]=="04 - Agent Pièces SWAP")])
     
     pieces_others_evening = pieces_all_evening - pieces_feider_evening
 
