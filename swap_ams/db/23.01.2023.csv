@@ -1,0 +1,123 @@
+id,creation_date,is_admin_closure,is_removed,ref,nom,statuts,types,contrat,"type ticket",pseudo
+516586,"2024-01-02 09:47:09",0,0,F-CROSS,FEIDER,"Le client doit indiquer s'il accepte ou non le devis SWAP",NULL,"BUILDER / TCK","Prise en charge Hors Garantie",Serge
+516608,"2024-01-02 14:40:26",0,0,HTRTPRO5350-4-1,HYUNDAI,"En attente de paiement du panier par le client",NULL,"BUILDER / TCK","Prise en charge Hors Garantie",Nadine
+516668,"2024-01-03 09:39:32",0,0,HG2201-PL,HYUNDAI,"La station a fait une demande de réparation qui doit être modérée par un admin.","Réparation sous garantie","BUILDER / TCK","Demande de réparation en station.","Anna R"
+516670,"2024-01-03 09:49:18",0,0,HG2201-PL,HYUNDAI,"La station a fait une demande de réparation qui doit être modérée par un admin.","Réparation sous garantie","BUILDER / TCK","Demande de réparation en station.","Anna R"
+516679,"2024-01-03 10:58:24",0,0,81967951,STERWINS,"Le client a accepté le devis, la station peut commencer la réparation",NULL,"LEROY MERLIN FR - STERWINS","Prise en charge Hors Garantie",Sylvie
+516682,"2024-01-03 11:27:36",0,0,HM20V2A,HYUNDAI,"La réparation s'est bien passée. Un certificat de diagnostic est disponible en pièce jointe à gauche. ","Réparation sous garantie","BUILDER / TCK","Demande de réparation en station.","Anna R"
+516749,"2024-01-03 17:38:23",0,0,HFBE8T55-2,HYUNDAI,"La station doit faire un diagnostic de la machine.","Réparation sous garantie","BUILDER / TCK","Demande de réparation en station.","01 - Agent Technique SWAP"
+516752,"2024-01-03 19:00:56",0,0,HCOMP100-2,HYUNDAI,"La station doit faire un diagnostic de la machine.","Réparation sous garantie","BUILDER / TCK","Demande de réparation en station.","01 - Agent Technique SWAP"
+516785,"2024-01-04 09:09:10",0,0,LH63,"NO NAME","Le client a accepté le devis, la station peut commencer la réparation",NULL,"SIPLEC - LITTAN","Prise en charge Hors Garantie",Nadine
+516804,"2024-01-04 11:22:35",0,0,HG2201-PL-A,HYUNDAI,"La station a fait une demande de réparation qui doit être modérée par un admin.","Réparation sous garantie","BUILDER / TCK","Demande de réparation en station.","Anna R"
+516806,"2024-01-04 11:44:08",0,0,HG4000-PL,HYUNDAI,"La station a fait une demande de réparation qui doit être modérée par un admin.","Réparation sous garantie","BUILDER / TCK","Demande de réparation en station.","Anna R"
+516858,"2024-01-04 15:48:44",0,0,HFBE8T55,HYUNDAI,"La station doit faire un diagnostic de la machine.",NULL,"BUILDER / TCK","Demande de Garantie","01 - Agent Technique SWAP"
+516860,"2024-01-04 16:00:59",0,0,HSC20V2A,HYUNDAI,"La station doit faire un diagnostic de la machine.","Réparation sous garantie","BUILDER / TCK","Demande de réparation en station.","02 - Agent Administratif SWAP"
+516914,"2024-01-05 10:46:29",0,0,RAC3100-B,RACING,"La station a fait une demande de réparation qui doit être modérée par un admin.","Réparation sous garantie","BUILDER / TCK","Demande de réparation en station.",Nadine
+517135,"2024-01-08 07:41:26",0,0,JHS-A020,ELSAY,"La station doit faire un diagnostic de la machine.",NULL,"JHS CLIM -LECLERC","Demande de Garantie","Florian MERCURI"
+517142,"2024-01-08 09:07:31",0,0,TL40B-20,GO/ON,"La station doit faire un diagnostic de la machine.","Réparation sous garantie","BCM Johnwin","Demande de réparation en station.","01 - Agent Technique SWAP"
+517149,"2024-01-08 10:10:09",0,0,TTROP224,TITAN,"Le client doit indiquer s'il accepte ou non le devis SWAP",NULL,KINGFISHER,"Prise en charge Hors Garantie",Nadine
+517163,"2024-01-08 11:32:51",0,0,ECSP51,ERBAUER,"La station doit faire un diagnostic de la machine.","Réparation sous garantie",KINGFISHER,"Demande de réparation en station.","01 - Agent Technique SWAP"
+517179,"2024-01-08 14:48:22",0,0,APW-VBT-130P,FOXTER,"Une demande de garantie a été effectuée. La demande est en cours de modération par SWAP","Réparation sous garantie","NHP FOXTER - LECLERC","Demande de réparation en station.","01 - Agent Technique SWAP"
+517228,"2024-01-08 16:43:43",0,0,HTDT5075-A,HYUNDAI,"La station établit son devis pour réparer la machine",NULL,"BUILDER / TCK","Prise en charge Hors Garantie",Nadine
+517266,"2024-01-09 07:39:11",0,0,HBT75-1,HYUNDAI,"Une demande de garantie a été effectuée. La demande est en cours de modération par SWAP",NULL,"BUILDER / TCK","Demande de Garantie","01 - Agent Technique SWAP"
+517285,"2024-01-09 09:39:14",0,0,HTRT42,HYUNDAI,"Le client a accepté le devis, la station peut commencer la réparation",NULL,"BUILDER / TCK","Prise en charge Hors Garantie",Quentin
+517299,"2024-01-09 11:01:47",0,0,HMELB20V2A,HYUNDAI,"Le client doit indiquer s'il accepte ou non le devis SWAP",NULL,"BUILDER / TCK","Prise en charge Hors Garantie","02 - Agent Administratif SWAP"
+517314,"2024-01-09 13:48:35",0,0,HTRTPRO5350-4-1,HYUNDAI,"La station a fait une demande de réparation qui doit être modérée par un admin.","Réparation sous garantie","BUILDER / TCK","Demande de réparation en station.","01 - Agent Technique SWAP"
+517326,"2024-01-09 15:01:43",0,0,HDBT24-1,HYUNDAI,"La station doit faire un diagnostic de la machine.","Réparation sous garantie","BUILDER / TCK","Demande de réparation en station.","01 - Agent Technique SWAP"
+517381,"2024-01-09 17:18:03",0,0,X-bg3000-21,BESTGREEN,"La station a fait une demande de réparation qui doit être modérée par un admin.","Réparation sous garantie","SWAP REUSED","Demande de réparation en station.","02 - Agent Administratif SWAP"
+517432,"2024-01-10 09:42:19",0,0,CSP2525,BRICOMARCHE,"DDG par la station, un admin doit modérer cette demande.","Réparation sous garantie","BCM Dunsch","Demande de réparation en station.",Nadine
+517435,"2024-01-10 10:03:54",0,0,HG2700-PL,HYUNDAI,"La station doit choisir comment s'occuper de la machine.","Réparation sous garantie","BUILDER / TCK","Demande de réparation en station.","Anna R"
+517437,"2024-01-10 10:08:47",0,0,HTRT65-2C,HYUNDAI,"La réparation s'est bien passée. Un certificat de diagnostic est disponible en pièce jointe à gauche. ","Réparation sous garantie","BUILDER / TCK","Demande de réparation en station.","01 - Agent Technique SWAP"
+517443,"2024-01-10 10:55:21",0,0,"IRIYA SEC",GOODHOME,"La station doit faire un diagnostic de la machine.",NULL,GOODHOME,"Demande de Garantie",Roulio
+517467,"2024-01-10 15:12:04",0,0,S-AC-10-OUT,HAIER,"La station doit faire un diagnostic de la machine.",NULL,"Climatiseurs HAIER","Demande de Garantie",Roulio
+517525,"2024-01-10 15:56:09",0,0,"K-615 20L",FOXTER,"La station doit faire un diagnostic de la machine.",NULL,"FOXTER ASPIRATEUR -LECLERC ","Demande de Garantie","01 - Agent Technique SWAP"
+517533,"2024-01-10 16:49:42",0,0,HTRT42-1,HYUNDAI,"La station doit faire un diagnostic de la machine.",NULL,"BUILDER / TCK","Demande de Garantie","01 - Agent Technique SWAP"
+517557,"2024-01-11 06:44:50",0,0,RACT90EA-2,RACING,"La station doit faire un diagnostic de la machine.",NULL,"BUILDER / TCK","Demande de Garantie","01 - Agent Technique SWAP"
+517576,"2024-01-11 08:43:58",0,0,FBRE40V,FEIDER,"La station a fait une demande de réparation qui doit être modérée par un admin.","Réparation sous garantie","BUILDER / TCK","Demande de réparation en station.","Anna R"
+517597,"2024-01-11 10:29:38",0,0,HEL2530-1,HYUNDAI,"La station doit faire un diagnostic de la machine.",NULL,"BUILDER / TCK","Demande de Garantie","01 - Agent Technique SWAP"
+517598,"2024-01-11 10:42:30",0,0,APW-VBT-130P(B),FOXTER,"La station doit choisir comment s'occuper de la machine.","Réparation sous garantie","NHP FOXTER - LECLERC","Demande de réparation en station.","01 - Agent Technique SWAP"
+517617,"2024-01-11 14:25:36",0,0,MFS-4300-1,BRICOMARCHE,"Un admin a validé la demande de réparation, les pièces sont en cours de transport.","Réparation sous garantie","BCM Johnwin","Demande de réparation en station.","01 - Agent Technique SWAP"
+517618,"2024-01-11 14:47:12",0,0,HTRT65,HYUNDAI,"La réparation s'est bien passée. Un certificat de diagnostic est disponible en pièce jointe à gauche. ","Réparation sous garantie","BUILDER / TCK","Demande de réparation en station.","01 - Agent Technique SWAP"
+517727,"2024-01-12 08:20:34",0,0,S-AC-10-IN,HAIER,"La station doit faire un diagnostic de la machine.",NULL,"Climatiseurs HAIER","Demande de Garantie","Christophe C"
+517741,"2024-01-12 10:09:31",0,0,HTRTPRO5350,HYUNDAI,"Le client doit indiquer s'il accepte ou non le devis SWAP",NULL,"BUILDER / TCK","Prise en charge Hors Garantie",Nadine
+517745,"2024-01-12 10:37:47",0,0,HTRTPRO5350-4-1,HYUNDAI,"La réparation s'est bien passée. Un certificat de diagnostic est disponible en pièce jointe à gauche. ","Réparation sous garantie","BUILDER / TCK","Demande de réparation en station.","01 - Agent Technique SWAP"
+517749,"2024-01-12 10:59:33",0,0,SONDRIO,GOODHOME,"La station doit faire un diagnostic de la machine.",NULL,GOODHOME,"Demande de Garantie",Roulio
+517751,"2024-01-12 11:09:29",0,0,HPV20V,HYUNDAI,"La station a fait une demande de réparation qui doit être modérée par un admin.","Réparation sous garantie","BUILDER / TCK","Demande de réparation en station.","Anna R"
+517753,"2024-01-12 11:20:35",0,0,HBAT40V4-A,HYUNDAI,"La station a fait une demande de réparation qui doit être modérée par un admin.","Réparation sous garantie","BUILDER / TCK","Demande de réparation en station.","Anna R"
+517772,"2024-01-12 14:33:46",0,0,TTCSP25,TITAN,"La station doit faire un diagnostic de la machine.",NULL,"KINGFISHER (Bronze)","Demande de Garantie","01 - Agent Technique SWAP"
+517773,"2024-01-12 14:54:45",0,0,HCOMBIBP50-A,HYUNDAI,"La station doit faire un diagnostic de la machine.","Réparation sous garantie","BUILDER / TCK","Demande de réparation en station.","02 - Agent Administratif SWAP"
+517777,"2024-01-12 15:11:25",0,0,"IRIYA SEC",GOODHOME,"La station doit faire un diagnostic de la machine.",NULL,GOODHOME,"Demande de Garantie",Roulio
+517816,"2024-01-12 15:46:32",0,0,LH63,"NO NAME","La réparation s'est bien passée. Un certificat de diagnostic est disponible en pièce jointe à gauche. ","Réparation sous garantie","SIPLEC - LITTAN","Demande de réparation en station.","01 - Agent Technique SWAP"
+517817,"2024-01-12 15:47:39",0,0,HTRT65-2C,HYUNDAI,"La station doit faire un diagnostic de la machine.","Réparation sous garantie","BUILDER / TCK","Demande de réparation en station.","02 - Agent Administratif SWAP"
+518088,"2024-01-15 10:03:25",0,0,HTDT5075-A,HYUNDAI,"Le client doit indiquer s'il accepte ou non le devis SWAP",NULL,"BUILDER / TCK","Prise en charge Hors Garantie",Nadine
+518091,"2024-01-15 10:05:49",0,0,S-AC-8-IN,HAIER,"La station doit faire un diagnostic de la machine.",NULL,"Climatiseurs HAIER","Demande de Garantie",Roulio
+518096,"2024-01-15 10:59:44",0,0,HTDT5075-1,HYUNDAI,"La station doit faire un diagnostic de la machine.","Réparation sous garantie","BUILDER / TCK","Demande de réparation en station.","01 - Agent Technique SWAP"
+518117,"2024-01-15 15:03:42",0,0,"CSP2525 (PN2500-2A)",BRICOMARCHE,"Le client doit indiquer s'il accepte ou non le devis SWAP",NULL,"BCM Johnwin","Prise en charge Hors Garantie",Nadine
+518121,"2024-01-15 15:13:00",0,0,"BG ECS2000-21",BESTGREEN,"La station doit faire un diagnostic de la machine.","Réparation sous garantie","BCM Johnwin","Demande de réparation en station.","01 - Agent Technique SWAP"
+518123,"2024-01-15 15:30:09",0,0,HFBE8T55-1,HYUNDAI,"La station doit faire un diagnostic de la machine.","Réparation sous garantie","BUILDER / TCK","Demande de réparation en station.","01 - Agent Technique SWAP"
+518167,"2024-01-15 16:26:33",0,0,RAC62PRRS,RACING,"La station doit faire un diagnostic de la machine.",NULL,"BUILDER / TCK","Demande de Garantie","01 - Agent Technique SWAP"
+518231,"2024-01-16 08:19:35",0,0,HG2201-PL,HYUNDAI,"La station a fait une demande de réparation qui doit être modérée par un admin.","Réparation sous garantie","BUILDER / TCK","Demande de réparation en station.","Anna R"
+518236,"2024-01-16 08:40:27",0,0,HG2201-PL-A,HYUNDAI,"La station a fait une demande de réparation qui doit être modérée par un admin.","Réparation sous garantie","BUILDER / TCK","Demande de réparation en station.","Anna R"
+518248,"2024-01-16 10:06:23",0,0,"BG ECS2000",BESTGREEN,"La station a fait une demande de réparation qui doit être modérée par un admin.","Réparation sous garantie","HG Divers","Demande de réparation en station.","01 - Agent Technique SWAP"
+518262,"2024-01-16 11:10:33",0,0,HBP1200,HYUNDAI,"La station doit faire un diagnostic de la machine.","Réparation sous garantie","BUILDER / TCK","Demande de réparation en station.","01 - Agent Technique SWAP"
+518270,"2024-01-16 12:43:19",0,0,HBT196-1,HYUNDAI,"La station doit faire un diagnostic de la machine.",NULL,"BUILDER / TCK","Demande de Garantie","01 - Agent Technique SWAP"
+518344,"2024-01-16 15:41:18",0,0,FCPR4700,FEIDER,"La station doit faire un diagnostic de la machine.",NULL,"BUILDER / TCK","Demande de Garantie","Christophe C"
+518351,"2024-01-16 16:33:10",0,0,MLMP550SP46-M&S,"MAC ALLISTER","Modération par un administrateur du devis proposé par la station",NULL,KINGFISHER,"Prise en charge Hors Garantie",Nadine
+518352,"2024-01-16 16:50:26",0,0,HTDT5075-2,HYUNDAI,"La station doit faire un diagnostic de la machine.",NULL,"BUILDER / TCK","Demande de Garantie","01 - Agent Technique SWAP"
+518400,"2024-01-17 08:31:49",0,0,HG2201-PL-A,HYUNDAI,"La station a fait une demande de réparation qui doit être modérée par un admin.","Réparation sous garantie","BUILDER / TCK","Demande de réparation en station.","Anna R"
+518411,"2024-01-17 09:23:27",0,0,FTDTR4240ES,FEIDER,"La station doit faire un diagnostic de la machine.",NULL,"BUILDER / TCK","Demande de Garantie",Gamzat
+518414,"2024-01-17 09:30:30",0,0,RAC6224PR-2,RACING,"La station doit faire un diagnostic de la machine.",NULL,"BUILDER / TCK","Demande de Garantie",Gamzat
+518434,"2024-01-17 11:30:42",0,0,TTCSP37,TITAN,"La station a fait une demande de réparation qui doit être modérée par un admin.","Réparation sous garantie","KINGFISHER (Bronze)","Demande de réparation en station.","01 - Agent Technique SWAP"
+518511,"2024-01-17 15:51:22",0,0,X-PRINT,FEIDER,"En attente de paiement du panier par le client",NULL,"BUILDER / TCK","Prise en charge Hors Garantie",Nadine
+518526,"2024-01-17 18:20:53",0,0,HTRTPRO5350-4-1,HYUNDAI,"La prestation n'a pas pu aboutir",NULL,"BUILDER / TCK","Prise en charge Hors Garantie",Nadine
+518529,"2024-01-17 19:11:43",0,0,ELMP145SP46,ERBAUER,"La prestation n'a pas pu aboutir",NULL,KINGFISHER,"Prise en charge Hors Garantie",Nadine
+518530,"2024-01-17 19:49:26",0,0,FC3200PAP4-1,FEIDER,"La station doit faire un diagnostic de la machine.",NULL,"BUILDER / TCK","Demande de Garantie","Christophe C"
+518576,"2024-01-18 09:22:51",0,0,SONDRIO,GOODHOME,"La station doit faire un diagnostic de la machine.",NULL,GOODHOME,"Demande de Garantie",Roulio
+518583,"2024-01-18 10:01:05",0,0,FC2400PAP4,FEIDER,"La demande de pièces a été acceptée, vous recevrez votre colis sous les meilleurs délais à l'adresse indiquée.",NULL,"BUILDER / TCK","Demande de pièces dans le cadre de la garantie","Christophe C"
+518593,"2024-01-18 10:42:30",0,0,HG4000-PL,HYUNDAI,"La station a fait une demande de réparation qui doit être modérée par un admin.","Réparation sous garantie","BUILDER / TCK","Demande de réparation en station.","Anna R"
+518601,"2024-01-18 11:24:33",0,0,HG5500-PL-A1,HYUNDAI,"La station doit faire un diagnostic de la machine.","Réparation sous garantie","BUILDER / TCK","Demande de réparation en station.","Anna R"
+518607,"2024-01-18 12:11:03",0,0,FC2400PAP4-1,FEIDER,"La station doit faire un diagnostic de la machine.",NULL,"BUILDER / TCK","Demande de Garantie","Florian STEFANI"
+518612,"2024-01-18 13:35:45",0,0,HTDT5070ES-A,HYUNDAI,"La station doit faire un diagnostic de la machine.",NULL,"BUILDER / TCK","Demande de Garantie",Jan
+518725,"2024-01-19 08:21:06",0,0,HG5500-PL-A,HYUNDAI,"La station doit faire un diagnostic de la machine.","Réparation sous garantie","BUILDER / TCK","Demande de réparation en station.","Anna R"
+518732,"2024-01-19 08:47:41",0,0,HFC20U,HYUNDAI,"La station doit faire un diagnostic de la machine.","Réparation sous garantie","BUILDER / TCK","Demande de réparation en station.","Anna R"
+518733,"2024-01-19 08:51:07",0,0,HBA20U2,HYUNDAI,"La station doit faire un diagnostic de la machine.","Réparation sous garantie","BUILDER / TCK","Demande de réparation en station.","Anna R"
+518755,"2024-01-19 12:21:49",0,0,TTLMP875SP56VS,TITAN,"La station doit faire un diagnostic de la machine.",NULL,KINGFISHER,"Demande de Garantie","Dan Vitellaro"
+518777,"2024-01-19 14:39:42",0,0,FC3500PAP,FEIDER,"La station doit faire un diagnostic de la machine.",NULL,"BUILDER / TCK","Demande de Garantie","Christophe C"
+518872,"2024-01-20 10:39:03",0,0,HFBE725TS,HYUNDAI,"La station doit faire un diagnostic de la machine.",NULL,"BUILDER / TCK","Demande de Garantie","01 - Agent Technique SWAP"
+518876,"2024-01-20 12:39:51",0,0,F-CROSS,FEIDER,"La station doit faire un diagnostic de la machine.",NULL,"BUILDER / TCK","Demande de Garantie","01 - Agent Technique SWAP"
+518960,"2024-01-21 08:08:16",0,0,HTRT65-2C,HYUNDAI,"La station doit faire un diagnostic de la machine.",NULL,"BUILDER / TCK","Demande de Garantie","01 - Agent Technique SWAP"
+519004,"2024-01-21 17:00:05",0,0,FC3200PAP4-1,FEIDER,"La station doit faire un diagnostic de la machine.",NULL,"BUILDER / TCK","Demande de Garantie","Florian STEFANI"
+519005,"2024-01-21 17:10:50",0,0,FC3200PAP4-1,FEIDER,"La station doit faire un diagnostic de la machine.",NULL,"BUILDER / TCK","Demande de Garantie","Florian STEFANI"
+519040,"2024-01-22 08:19:29",0,0,HG5500-PL-A,HYUNDAI,"La station doit faire un diagnostic de la machine.","Réparation sous garantie","BUILDER / TCK","Demande de réparation en station.","Anna R"
+519048,"2024-01-22 09:00:07",0,0,"CSP2525 (PN2500-2A)",BRICOMARCHE,"La station doit faire un diagnostic de la machine.",NULL,"BCM Johnwin","Demande de Garantie","01 - Agent Technique SWAP"
+519051,"2024-01-22 09:09:53",0,0,X-PRINT,FEIDER,"La station doit faire un diagnostic de la machine.",NULL,"BUILDER / TCK","Demande de Garantie","01 - Agent Technique SWAP"
+519060,"2024-01-22 09:51:12",0,0,HTRT65-2C,HYUNDAI,"La station doit faire un diagnostic de la machine.","Réparation sous garantie","BUILDER / TCK","Demande de réparation en station.","02 - Agent Administratif SWAP"
+519078,"2024-01-22 11:35:50",0,0,FLORYA,GOODHOME,"La station doit faire un diagnostic de la machine.",NULL,GOODHOME,"Demande de Garantie","01 - Agent Technique SWAP"
+519081,"2024-01-22 12:21:44",0,0,FTDEC220V-4A,FEIDER,"La station doit faire un diagnostic de la machine.",NULL,"BUILDER / TCK","Demande de Garantie","01 - Agent Technique SWAP"
+519084,"2024-01-22 12:27:11",0,0,HDBT32,HYUNDAI,"La station doit faire un diagnostic de la machine.",NULL,"BUILDER / TCK","Demande de Garantie","01 - Agent Technique SWAP"
+519088,"2024-01-22 12:55:44",0,0,TTTP123,TITAN,"La station doit faire un diagnostic de la machine.","Réparation sous garantie",KINGFISHER,"Demande de réparation en station.","01 - Agent Technique SWAP"
+519101,"2024-01-22 15:33:03",0,0,FC3500PAP,FEIDER,"La station doit faire un diagnostic de la machine.",NULL,"BUILDER / TCK","Demande de Garantie","Florian STEFANI"
+519116,"2024-01-22 15:36:04",0,0,HG1600i-A,HYUNDAI,"La station doit faire un diagnostic de la machine.",NULL,"BUILDER / TCK","Demande de Garantie","01 - Agent Technique SWAP"
+519154,"2024-01-22 16:33:01",0,0,TTLMP200SP53VS,TITAN,"La station doit faire un diagnostic de la machine.",NULL,KINGFISHER,"Demande de Garantie","01 - Agent Technique SWAP"
+519155,"2024-01-22 16:33:39",0,0,HTRT3835,HYUNDAI,"La station doit faire un diagnostic de la machine.",NULL,"BUILDER / TCK","Demande de Garantie","01 - Agent Technique SWAP"
+519158,"2024-01-22 16:41:47",0,0,X-HDBT314T,HYUNDAI,"La station doit faire un diagnostic de la machine.",NULL,"SWAP REUSED","Demande de Garantie","01 - Agent Technique SWAP"
+519159,"2024-01-22 16:41:54",0,0,TTLMP475iSSP46-M&S-2,TITAN,"La station doit faire un diagnostic de la machine.",NULL,KINGFISHER,"Demande de Garantie","01 - Agent Technique SWAP"
+519161,"2024-01-22 17:21:12",0,0,HCOMBID65,HYUNDAI,"La station doit faire un diagnostic de la machine.",NULL,"BUILDER / TCK","Demande de Garantie","01 - Agent Technique SWAP"
+519164,"2024-01-22 17:43:40",0,0,LH63,"NO NAME","La station doit faire un diagnostic de la machine.",NULL,"SIPLEC - LITTAN","Demande de Garantie","01 - Agent Technique SWAP"
+519165,"2024-01-22 21:53:49",0,0,EZ40VTREN,ENERGIZER,"La station doit faire un diagnostic de la machine.",NULL,"BUILDER / TCK","Demande de Garantie","03 - Agent Vérification SWAP"
+519204,"2024-01-23 07:16:44",0,0,81968158,STERWINS,"La station doit faire un diagnostic de la machine.","Réparation sous garantie","LEROY MERLIN FR - STERWINS","Demande de réparation en station.","Ghizlane "
+519205,"2024-01-23 07:26:56",0,0,"SMART 53 SPBS",MTD,"La station doit faire un diagnostic de la machine.",NULL,"MTD - standard","Demande de Garantie","Ghizlane "
+519220,"2024-01-23 08:50:10",0,0,BGPROCS2400-17,"BESTGREEN PRO","La station a fait une demande de réparation qui doit être modérée par un admin.","Réparation sous garantie","BCM YAT automne 2017","Demande de réparation en station.","01 - Agent Technique SWAP"
+519223,"2024-01-23 09:45:31",0,0,HTRT3835,HYUNDAI,"La station doit faire un diagnostic de la machine.",NULL,"BUILDER / TCK","Demande de Garantie","01 - Agent Technique SWAP"
+519225,"2024-01-23 09:55:13",0,0,TTROP224,TITAN,"La station doit faire un diagnostic de la machine.",NULL,KINGFISHER,"Demande de Garantie","01 - Agent Technique SWAP"
+519226,"2024-01-23 10:06:55",0,0,FHAEP20V20,FEIDER,"La station doit faire un diagnostic de la machine.",NULL,"BUILDER / TCK","Demande de Garantie","01 - Agent Technique SWAP"
+519227,"2024-01-23 10:13:06",0,0,"Litchi 2500w",YUZU,"La station doit faire un diagnostic de la machine.",NULL,"Clim Litchi","Demande de Garantie","01 - Agent Technique SWAP"
+519229,"2024-01-23 10:13:48",0,0,TT6MTP52,TITAN,"La station doit faire un diagnostic de la machine.",NULL,KINGFISHER,"Demande de Garantie","01 - Agent Technique SWAP"
+519231,"2024-01-23 10:16:38",0,0,"IRIYA SEC",GOODHOME,"La station doit faire un diagnostic de la machine.",NULL,GOODHOME,"Demande de Garantie","01 - Agent Technique SWAP"
+519234,"2024-01-23 10:23:29",0,0,HDBT24-1,HYUNDAI,"La station doit faire un diagnostic de la machine.",NULL,"BUILDER / TCK","Demande de Garantie","03 - Agent Vérification SWAP"
+519243,"2024-01-23 10:56:53",0,0,"BG ECS2000",BESTGREEN,"La station doit faire un diagnostic de la machine.",NULL,"HG Divers","Demande de Garantie","03 - Agent Vérification SWAP"
+519246,"2024-01-23 11:13:54",0,0,ABW-VBS-100P(B),FOXTER,"La station a fait une demande de réparation qui doit être modérée par un admin.","Réparation sous garantie","NHP FOXTER - LECLERC","Demande de réparation en station.","03 - Agent Vérification SWAP"
+519256,"2024-01-23 12:02:45",0,0,600103750,GARDENSTAR,"Une demande de garantie a été effectuée. La demande est en cours de modération par SWAP","Réparation sous garantie","Auchan retail international","Demande de réparation en station.",Roulio
+519257,"2024-01-23 12:08:31",0,0,882285,GARDENSTAR,"La station a fait une demande de réparation qui doit être modérée par un admin.","Réparation sous garantie","Auchan retail international","Demande de réparation en station.",Roulio
+519260,"2024-01-23 12:13:09",0,0,600094149,GARDENSTAR,"La station a fait une demande de réparation qui doit être modérée par un admin.","Réparation sous garantie","Auchan retail international","Demande de réparation en station.",Roulio
+519261,"2024-01-23 12:16:17",0,0,600103750,GARDENSTAR,"La station a fait une demande de réparation qui doit être modérée par un admin.","Réparation sous garantie","Auchan retail international","Demande de réparation en station.",Roulio
