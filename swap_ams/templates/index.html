@@ -44,8 +44,8 @@
                         </td>
                         <td class="text-end">
                           <ul>
-                            <li>0</li>
-                            <li>0</li>
+                            <li>{{ verif_feider_difference }}</li>
+                            <li>{{ verif_others_difference }}</li>
                           </ul>
                         </td>
                     </tr>
@@ -71,8 +71,8 @@
                       </td>
                       <td class="text-end">
                         <ul>
-                          <li>0</li>
-                          <li>0</li>
+                          <li>{{ admin_feider_difference }}</li>
+                          <li>{{ admin_others_difference }}</li>
                         </ul>
                       </td>
                     </tr>
@@ -98,8 +98,8 @@
                       </td>
                       <td class="text-end">
                         <ul>
-                          <li>0</li>
-                          <li>0</li>
+                          <li>{{ tech_feider_difference }}</li>
+                          <li>{{ tech_others_difference }}</li>
                         </ul>
                       </td>
                     </tr>
@@ -114,19 +114,19 @@
                       <td class="text-end">
                         <ul>
                           <li>{{ pieces_feider_morning }}</li>
-                          <li>{{ pieces_others }}</li>
+                          <li>{{ pieces_others_morning }}</li>
                         </ul>
                       </td>
                       <td class="text-end">
                         <ul>
-                          <li>{{ pieces_others_evening }}</li>
                           <li>{{ pieces_feider_evening }}</li>
+                          <li>{{ pieces_others_evening }}</li>
                         </ul>
                       </td>
                       <td class="text-end">
                         <ul>
-                          <li>0</li>
-                          <li>0</li>
+                          <li>{{ pieces_feider_difference }}</li>
+                          <li>{{ pieces_others_difference }}</li>
                         </ul>
                       </td>
                     </tr>
@@ -138,11 +138,11 @@
                   <td class="border-0 text-end"></td>
                   <td class="border-0 text-end">{{ total_tickets_morning }}</td>
                   <td class="border-0 text-end">{{ total_tickets_evening }}</td>
-                  <td class="border-0 text-end">0</td>
+                  <td class="border-0 text-end">{{ total_tickets_difference }}</td>
               </tr>
               <tr>
                 <td class="border-0 fw-bold text-start" colspan="1">Nombre de tickets crées</td>
-                <td class="border-0 text-end" colspan="4">0</td>
+                <td class="border-0 text-end" colspan="4">{{ tickets_created_today }}</td>
               </tr>
 
           </tfoot>
