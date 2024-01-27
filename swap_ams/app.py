@@ -1,6 +1,6 @@
 from datetime import date
 from datetime import datetime
-from flask import Flask, flash, redirect, render_template, request, session
+from flask import Flask, render_template
 import pandas as pd
 
 
@@ -12,12 +12,12 @@ app = Flask(__name__)
 def index():
 
     # read the morning file
-    # dfMorning = pd.read_csv("D:/Code/CS50_Final/swap_ams/db/morning.csv", sep=",")
-    dfMorning = pd.read_csv("/home/gamz/Code/SWAP_daily/cs50_final/swap_ams/db/morning.csv", sep=",")
+    dfMorning = pd.read_csv("D:/Code/CS50_Final/swap_ams/db/morning.csv", sep=",")
+    # dfMorning = pd.read_csv("/home/gamz/Code/SWAP_daily/cs50_final/swap_ams/db/morning.csv", sep=",")
 
     # read the evening file
-    # dfEvening = pd.read_csv("D:/Code/CS50_Final/swap_ams/db/evening.csv", sep=",")
-    dfEvening = pd.read_csv("/home/gamz/Code/SWAP_daily/cs50_final/swap_ams/db/evening.csv", sep=",")
+    dfEvening = pd.read_csv("D:/Code/CS50_Final/swap_ams/db/evening.csv", sep=",")
+    # dfEvening = pd.read_csv("/home/gamz/Code/SWAP_daily/cs50_final/swap_ams/db/evening.csv", sep=",")
 
     dfEvening['creation_day'] = pd.to_datetime(dfEvening['creation_date']).dt.date
 
@@ -108,6 +108,13 @@ def index():
     # qty of tickets createed per day
 
     tickets_created_per_day = {}
+
+    current_date = date.today()
+    current_date = current_date.strftime('%d.%m.%Y')
+
+    tickets_created_per_day[current_date] = tickets_created_today
+
+    print(tickets_created_per_day)
 
 
     return render_template("index.html", 
