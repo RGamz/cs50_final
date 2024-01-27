@@ -4,6 +4,7 @@ from flask import Flask, flash, redirect, render_template, request, session
 import pandas as pd
 
 
+
 # Configure application
 app = Flask(__name__)
 
@@ -12,11 +13,11 @@ def index():
 
     # read the morning file
     # dfMorning = pd.read_csv("D:/Code/CS50_Final/swap_ams/db/morning.csv", sep=",")
-    dfMorning = pd.read_csv("/home/gamz/Code/SWAP/cs50_final/swap_ams/db/morning.csv", sep=",")
+    dfMorning = pd.read_csv("/home/gamz/Code/SWAP_daily/cs50_final/swap_ams/db/morning.csv", sep=",")
 
     # read the evening file
     # dfEvening = pd.read_csv("D:/Code/CS50_Final/swap_ams/db/evening.csv", sep=",")
-    dfEvening = pd.read_csv("/home/gamz/Code/SWAP/cs50_final/swap_ams/db/evening.csv", sep=",")
+    dfEvening = pd.read_csv("/home/gamz/Code/SWAP_daily/cs50_final/swap_ams/db/evening.csv", sep=",")
 
     dfEvening['creation_day'] = pd.to_datetime(dfEvening['creation_date']).dt.date
 
@@ -100,9 +101,13 @@ def index():
     pieces_feider_difference = pieces_feider_morning - pieces_feider_evening
     pieces_others_difference = pieces_others_morning - pieces_others_evening
 
-    # qty of created tickets per day
+    # qty of created tickets today
 
     tickets_created_today = len(dfEvening[(dfEvening["creation_day"]==date.today())])
+
+    # qty of tickets createed per day
+
+    tickets_created_per_day = {}
 
 
     return render_template("index.html", 

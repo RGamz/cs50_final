@@ -704,5 +704,5 @@ id,creation_date,ref,marque,statuts,types,contrat,"type ticket",pseudo
 519286,"2024-01-23 15:18:51",HTRTPRO5350-4-1,HYUNDAI,"La station doit faire un diagnostic de la machine.",NULL,"BUILDER / TCK","Demande de Garantie","01 - Agent Technique SWAP"
 519288,"2024-01-23 15:22:05",F-CROSS,FEIDER,"La station doit faire un diagnostic de la machine.",NULL,"BUILDER / TCK","Demande de Garantie","01 - Agent Technique SWAP"
 519290,"2024-01-23 15:33:39",TTCSP25,TITAN,"La station doit faire un diagnostic de la machine.",NULL,"KINGFISHER (Bronze)","Demande de Garantie","01 - Agent Technique SWAP"
-519345,"2024-01-23 15:59:03",HBP1200,HYUNDAI,"La station doit faire un diagnostic de la machine.",NULL,"BUILDER / TCK","Demande de Garantie","01 - Agent Technique SWAP"
-519346,"2024-01-23 16:05:13",FIE1200W,FEIDER,"La station a fait une demande de réparation qui doit être modérée par un admin.","Réparation sous garantie","BUILDER / TCK","Demande de réparation en station.","01 - Agent Technique SWAP"
+519345,"2024-01-27 15:59:03",HBP1200,HYUNDAI,"La station doit faire un diagnostic de la machine.",NULL,"BUILDER / TCK","Demande de Garantie","01 - Agent Technique SWAP"
+519346,"2024-01-27 16:05:13",FIE1200W,FEIDER,"La station a fait une demande de réparation qui doit être modérée par un admin.","Réparation sous garantie","BUILDER / TCK","Demande de réparation en station.","01 - Agent Technique SWAP"
