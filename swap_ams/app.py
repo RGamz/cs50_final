@@ -2,12 +2,50 @@ from datetime import date
 from datetime import datetime
 from flask import Flask, render_template
 import pandas as pd
+import sqlite3
 
+# create a database in sqllite3
+db_connection = sqlite3.connect('D:/Code/CS50_Final/swap_ams/db/support_tickets_daily_stats.db')
+cursor = db_connection.cursor()
+
+# create daily stats table in sql
+db_creation = """CREATE TABLE IF NOT EXISTS daily_stats (
+id INTEGER PRIMARY KEY NOT NULL,
+date_of_creation DATE NOT NULL, 
+tickets_qty INT NOT NULL
+)"""
+
+cursor.execute(db_creation)
+db_connection.commit()
+
+#  the code below is used once to feed sql db with past data and is should not be used only once, during app deployment
+# ---------------------------------------------------------------------------------------------------------------------
+# # Function to extract date from datetime string
+# def extract_date(datetime_str):
+#     return pd.to_datetime(datetime_str, format='%Y-%m-%d %H:%M:%S')
+
+# # Read CSV file into a pandas DataFrame
+# csv_file = 'D:/Code/CS50_Final/swap_ams/db/evening.csv'
+# df = pd.read_csv(csv_file, parse_dates=['creation_date'], date_parser=extract_date)
+
+# # Group by date and count the number of rows for each date
+# daily_counts = df.groupby(df['creation_date'].dt.date).size().reset_index(name='tickets_qty')
+
+# # Insert data into daily_stats table
+# for index, row in daily_counts.iterrows():
+#     cursor.execute("INSERT INTO daily_stats (date_of_creation, tickets_qty) VALUES (?, ?)",
+#                 (str(row['creation_date']), row['tickets_qty']))
+# 
+# # Commit changes and close connection
+# db_connection.commit()
+# -------------------------------------------------------------------------------------------------------------------
+db_connection.close()
 
 
 # Configure application
 app = Flask(__name__)
 
+# create index route
 @app.route("/")
 def index():
 
@@ -18,9 +56,6 @@ def index():
     # read the evening file
     dfEvening = pd.read_csv("D:/Code/CS50_Final/swap_ams/db/evening.csv", sep=",")
     # dfEvening = pd.read_csv("/home/gamz/Code/SWAP_daily/cs50_final/swap_ams/db/evening.csv", sep=",")
-
-    dfEvening['creation_day'] = pd.to_datetime(dfEvening['creation_date']).dt.date
-
     
     # show all tickets that are not admin closure and not removed
     total_tickets_morning = len(dfMorning)
@@ -99,22 +134,21 @@ def index():
     pieces_others_evening = pieces_all_evening - pieces_feider_evening
 
     pieces_feider_difference = pieces_feider_morning - pieces_feider_evening
-    pieces_others_difference = pieces_others_morning - pieces_others_evening
+    pieces_others_difference = pieces_others_morning - pieces_others_evening 
 
-    # qty of created tickets today
 
-    tickets_created_today = len(dfEvening[(dfEvening["creation_day"]==date.today())])
-
-    # qty of tickets createed per day
-
-    tickets_created_per_day = {}
-
+    # get current date
     current_date = date.today()
-    current_date = current_date.strftime('%d.%m.%Y')
+    current_date = current_date.strftime('%Y-%m-%d')
 
-    tickets_created_per_day[current_date] = tickets_created_today
+    # connect to the db
+    db_connection = sqlite3.connect('D:/Code/CS50_Final/swap_ams/db/support_tickets_daily_stats.db')
+    cursor = db_connection.cursor()
 
-    print(tickets_created_per_day)
+    # get today's ticket qty
+    cursor.execute("SELECT tickets_qty FROM daily_stats WHERE date_of_creation = ?", (current_date,))
+    tickets_created_today = cursor.fetchone()[0]  # Fetch the result and get the count value
+    db_connection.close()
 
 
     return render_template("index.html", 
