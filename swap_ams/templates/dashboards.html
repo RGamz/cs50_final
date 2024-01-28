@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Dashboards
+{% endblock %}
+
+    <main>
+      {% block main %}
+        <div class="col-xs-10, col-sm-6">
+            <div class="card card-style mb-2">
+                <div class="card-body">
+                    <div class="chart-container" style="position: relative;">
+                        <canvas id="dashboards"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="width: 1000px;">
+            <canvas id="dashboard"></canvas>
+          </div>
+          
+          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+          
+          <script>
+            const ctx = document.getElementById('dashboards');
+
+            // let dates = {{ dates_list }};
+            let dates = [a, b, c]
+            // let qty = {{ tickets_list }}
+            let qty = [1, 2, 3]
+          
+            new Chart(ctx, {
+              type: 'bar',
+              data: {
+                labels: dates,
+                datasets: [{
+                  label: '# of Tickets per day',
+                  data: qty,
+                  borderWidth: 1
+                }]
+              },
+              options: {
+                scales: {
+                  y: {
+                    beginAtZero: true
+                  }
+                }
+              }
+            });
+          </script>
+      {% endblock %}
+
+    </main>
+
+
+    

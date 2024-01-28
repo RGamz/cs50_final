@@ -169,6 +169,29 @@ def index():
                            admin_feider_difference=admin_feider_difference, admin_others_difference=admin_others_difference, 
                            tickets_created_today=tickets_created_today)
 
+@app.route("/dashboards")
+def dashboards():
+
+    # connect to the db
+    db_connection = sqlite3.connect('D:/Code/CS50_Final/swap_ams/db/support_tickets_daily_stats.db')
+    cursor = db_connection.cursor()
+
+    # get today's ticket qty
+    cursor.execute("SELECT date_of_creation FROM daily_stats")
+    dates_list = []
+    check = cursor.fetchall()  # Fetch the result and get the count value
+    for i in check:
+        dates_list.append(i[0])
+
+    cursor.execute("SELECT tickets_qty FROM daily_stats")
+    tickets_list = []
+    check2 = cursor.fetchall()  # Fetch the result and get the count value
+    for i in check2:
+        tickets_list.append(i[0])
+
+    db_connection.close()
+
+    return render_template("dashboards.html", dates_list=dates_list, tickets_list=tickets_list)
 
 # следить за изменениями в количестве обработанных и необработанных тикетов на ежедневной основе с разрезом по контрактам
 
