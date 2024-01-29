@@ -138,8 +138,9 @@ def index():
 
 
     # get current date
-    current_date = date.today()
-    current_date = current_date.strftime('%Y-%m-%d')
+    # current_date = date.today()
+    # current_date = current_date.strftime('%Y-%m-%d')
+    current_date = '2024-01-23'
 
     # connect to the db
     db_connection = sqlite3.connect('D:/Code/CS50_Final/swap_ams/db/support_tickets_daily_stats.db')
@@ -199,3 +200,6 @@ def dashboards():
 # статусы, логи
 
 # сколько тикетов не закрытых было и сколько стало
+
+if __name__=="__main__":
+    app.run(debug=True)
