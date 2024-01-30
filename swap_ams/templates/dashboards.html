@@ -4,54 +4,50 @@
     Dashboards
 {% endblock %}
 
-    <main>
-      {% block main %}
-        <div class="col-xs-10, col-sm-6">
-            <div class="card card-style mb-2">
-                <div class="card-body">
-                    <div class="chart-container" style="position: relative;">
-                        <canvas id="dashboards"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div style="width: 1000px;">
-            <canvas id="dashboard"></canvas>
+{% block main %}
+  <div class="col-xs-10, col-sm-6">
+      <div class="card card-style mb-2">
+          <div class="card-body">
+              <div class="chart-container" style="position: relative;">
+                  <canvas id="ticketsPerDayCreated"></canvas>
+              </div>
           </div>
-          
-          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-          
-          <script>
-            const ctx = document.getElementById('dashboards');
-
-            // let dates = {{ dates_list }};
-            let dates = [a, b, c]
-            // let qty = {{ tickets_list }}
-            let qty = [1, 2, 3]
-          
-            new Chart(ctx, {
-              type: 'bar',
-              data: {
-                labels: dates,
-                datasets: [{
-                  label: '# of Tickets per day',
-                  data: qty,
-                  borderWidth: 1
-                }]
-              },
-              options: {
-                scales: {
-                  y: {
-                    beginAtZero: true
-                  }
-                }
-              }
-            });
-          </script>
-      {% endblock %}
-
-    </main>
+      </div>
+  </div>
+  
+  <div style="width: 1000px;">
+    <canvas id="ticketsPerDayCreated"></canvas>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <script>
+    // Use the Jinja syntax to embed Python variables in JavaScript
+    const datesList = {{ dates_list|tojson|safe }};
+    const ticketsList = {{ tickets_list|tojson|safe }};
+    
+    const ctx = document.getElementById('ticketsPerDayCreated');
+    
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: datesList,
+        datasets: [{
+          label: 'QTY of Tickets per day',
+          data: ticketsList,
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+{% endblock %}
 
 
     

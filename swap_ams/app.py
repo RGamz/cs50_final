@@ -35,7 +35,7 @@ db_connection.commit()
 # for index, row in daily_counts.iterrows():
 #     cursor.execute("INSERT INTO daily_stats (date_of_creation, tickets_qty) VALUES (?, ?)",
 #                 (str(row['creation_date']), row['tickets_qty']))
-# 
+
 # # Commit changes and close connection
 # db_connection.commit()
 # -------------------------------------------------------------------------------------------------------------------
@@ -137,17 +137,19 @@ def index():
     pieces_others_difference = pieces_others_morning - pieces_others_evening 
 
 
-    # get current date
-    # current_date = date.today()
-    # current_date = current_date.strftime('%Y-%m-%d')
-    current_date = '2024-01-23'
-
     # connect to the db
     db_connection = sqlite3.connect('D:/Code/CS50_Final/swap_ams/db/support_tickets_daily_stats.db')
     cursor = db_connection.cursor()
 
+    # get current date 
+    current_date = date.today()
+    current_date = current_date.strftime('%Y-%m-%d')
+    temp_list = []
+    temp_list.append(current_date)
+    current_date = temp_list
+
     # get today's ticket qty
-    cursor.execute("SELECT tickets_qty FROM daily_stats WHERE date_of_creation = ?", (current_date,))
+    cursor.execute("SELECT tickets_qty FROM daily_stats WHERE date_of_creation = ?", (current_date))
     tickets_created_today = cursor.fetchone()[0]  # Fetch the result and get the count value
     db_connection.close()
 
@@ -194,12 +196,11 @@ def dashboards():
 
     return render_template("dashboards.html", dates_list=dates_list, tickets_list=tickets_list)
 
-# следить за изменениями в количестве обработанных и необработанных тикетов на ежедневной основе с разрезом по контрактам
-
-# скачать базу данных для отслеживания, нужны : номер тикета, админ, контракт, закрыто или нет (админ + другое)
-# статусы, логи
-
 # сколько тикетов не закрытых было и сколько стало
+
+@app.errorhandler(404)
+def pageNotFound(error):
+    return render_template("page404.html")
 
 if __name__=="__main__":
     app.run(debug=True)
