@@ -196,7 +196,9 @@ def dashboards():
 
     return render_template("dashboards.html", dates_list=dates_list, tickets_list=tickets_list)
 
-# сколько тикетов не закрытых было и сколько стало
+@app.route("/distributor")
+def distributor():
+    return render_template("distributor.html")
 
 @app.errorhandler(404)
 def pageNotFound(error):
@@ -204,3 +206,6 @@ def pageNotFound(error):
 
 if __name__=="__main__":
     app.run(debug=True)
+
+
+# сколько тикетов не закрытых было и сколько стало
