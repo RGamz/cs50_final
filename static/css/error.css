@@ -1,0 +1,67 @@
+body{
+    margin:0;
+    background-color: #FFE6E6;
+    font-family: Permanent Marker;
+    color:#AD88C6
+}
+.container{
+    height: 500px;
+    width: 100%;
+    position: absolute;  
+}
+.wall{
+    position: absolute;
+    top:12%;
+    left: 50%;
+    height:25%;
+    transform: translate(-50%,-50%);
+}
+.wall::before{
+    content: '5';
+    position: absolute;
+    font-family: Caveat Brush;
+    font-size: 330px;
+    left:-40%;
+    top:-10%;
+    animation: sl  ease 1s forwards;
+}
+.wall::after{
+    content: '0';
+    position: absolute;
+    font-family: Caveat Brush;
+    font-size: 330px;
+    right:-40%;
+    top:-10%;
+    animation: sl  ease 1s forwards;
+}
+.errortext h1{
+    position: absolute;
+    top:63%;
+    left:50%;
+    transform: translateX(-50%);
+    font-size: 2.5vw;
+    color: #8d61aa;
+}
+.errortext h2{
+    position: absolute;
+    top:75%;
+    left:50%;
+    transform: translateX(-50%);
+    font-size: 2vw;
+}
+
+.errortext h3{
+    position: absolute;
+    top:100%;
+    left:50%;
+    font-size: 1vw;
+    color:#E1AFD1
+}
+a{
+    color: #7469B6;
+}
+@keyframes sl{
+    0%{ transform: scale(0.8);}
+    50%{ transform: scale(1.5);}
+    100% {transform: scale(1);}
+}

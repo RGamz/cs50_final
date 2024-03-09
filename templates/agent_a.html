@@ -1,0 +1,300 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Agent Administratif  
+{% endblock %}
+
+{% block main %}
+
+<section>
+    <h1>Agent Administratif</h1>
+
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="station_transport-tab" data-bs-toggle="tab" data-bs-target="#station_transport-tab-pane" type="button" role="tab" aria-controls="station_transport-tab-pane" aria-selected="true">Station et transport aller: <span class="bold">{{ openTicketCounter }}</span></button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="transfert_tech-tab" data-bs-toggle="tab" data-bs-target="#transfert_tech-tab-pane" type="button" role="tab" aria-controls="transfert_tech-tab-pane" aria-selected="true">Transfert tech? <span class="bold">{{ openTicketCounter2 }}</span></button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="transport_retour-tab" data-bs-toggle="tab" data-bs-target="#transport_retour-tab-pane" type="button" role="tab" aria-controls="transport_retour-tab-pane" aria-selected="true">Transport retour? <span class="bold">{{ openTicketCounter3 }}</span></button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="all_admin-tab" data-bs-toggle="tab" data-bs-target="#all_admin-tab-pane" type="button" role="tab" aria-controls="all_admin-tab-pane" aria-selected="true">Tous les tickets: <span class="bold">{{ openTicketCounter30 }}</span></button>
+        </li>
+    </ul>
+    
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="station_transport-tab-pane" role="tabpanel" aria-labelledby="station_transport-tab" tabindex="0">
+            <h3>Instructions de traitement:</h3>
+            <p>Pour tous ces tickets il faut soit attribuer la bonne <span class="bold">station</span>, soit organiser le <span class="bold">transport aller</span>.</p>
+            
+            <div>
+                <input class="searchInput input-group mb-3" data-table-id="sortableTable1" type="search" placeholder="Search" aria-label="Search" aria-target="sortableTable1">
+            </div>
+
+            <table class="table table-striped sortTable" id="sortableTable1">
+                <thead>
+                    <tr>
+                        <th class="text-start" data-type="number">Ticket</th>
+                        <th class="text-end">Machine</th>
+                        <th class="text-end">Contrat</th>
+                        <th class="text-end">Magasin</th>
+                        <th class="text-end">Station</th>
+                        <th class="text-end">Lu/Non-Lu</th>
+                        <th class="text-end" data-type="number">Jours depuis dernière action</th>
+                        <th class="text-end" data-type="number">Jours depuis création</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for ticket in openTicketList %}
+                        <tr>
+                            <td class="text-start">
+                                <a class="ticket_link" href="https://services.swap-europe.com/{{ticket['id']}}" target="_blank" rel="noopener noreferrer">{{ ticket['id'] }}</a>
+                            </td>
+                            <td class="text-end">
+                                {{ ticket['ref'] }}
+                            </td>
+                            <td class="text-end">
+                                {{ ticket['contrat'] }}
+                            </td>
+                            <td class="text-end">
+                                {% if ticket['distributeur'] %}
+                                {{ ticket['distributeur'] }}
+                                {% else %}
+                                    
+                                {% endif %}
+                            </td>
+                            <td class="text-end">
+                                {% if ticket['station'] %}
+                                {{ ticket['station'] }}
+                                {% else %}
+                                    
+                                {% endif %}
+                            </td>
+                            <td class="text-end">
+                                {% if ticket['read'] == 1 %}
+                                    Oui
+                                {% elif ticket['read'] == 0 %}
+                                    Non
+                                {% else %}
+                                    Error!
+                                {% endif %}
+                            </td>
+                            <td class="text-end">
+                                {{ ticket['days_since_last_log'] }}
+                            </td>
+                            <td class="text-end">
+                                {{ ticket['days_since_creation'] }}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane fade show" id="transfert_tech-tab-pane" role="tabpanel" aria-labelledby="transfert_tech-tab" tabindex="0">
+            <h3>Instructions de traitement:</h3>
+            <p>Station a demandé la réparation ou DDG mais le ticket n'est pas transféré chez <span class="bold">agent technique</span>. A vérifier!.</p>
+            
+            <div>
+                <input class="searchInput input-group mb-3" data-table-id="sortableTable2" type="search" placeholder="Search" aria-label="Search" aria-target="sortableTable2">
+            </div>
+
+            <table class="table table-striped sortTable" id="sortableTable2">
+                <thead>
+                    <tr>
+                        <th class="text-start" data-type="number">Ticket</th>
+                        <th class="text-end">Machine</th>
+                        <th class="text-end">Contrat</th>
+                        <th class="text-end">Magasin</th>
+                        <th class="text-end">Station</th>
+                        <th class="text-end">Lu/Non-Lu</th>
+                        <th class="text-end" data-type="number">Jours depuis dernière action</th>
+                        <th class="text-end" data-type="number">Jours depuis création</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for ticket in openTicketList2 %}
+                        <tr>
+                            <td class="text-start">
+                                <a class="ticket_link" href="https://services.swap-europe.com/{{ticket['id']}}" target="_blank" rel="noopener noreferrer">{{ ticket['id'] }}</a>
+                            </td>
+                            <td class="text-end">
+                                {{ ticket['ref'] }}
+                            </td>
+                            <td class="text-end">
+                                {{ ticket['contrat'] }}
+                            </td>
+                            <td class="text-end">
+                                {% if ticket['distributeur'] %}
+                                {{ ticket['distributeur'] }}
+                                {% else %}
+                                    
+                                {% endif %}
+                            </td>
+                            <td class="text-end">
+                                {% if ticket['station'] %}
+                                {{ ticket['station'] }}
+                                {% else %}
+                                    
+                                {% endif %}
+                            </td>
+                            <td class="text-end">
+                                {% if ticket['read'] == 1 %}
+                                    Oui
+                                {% elif ticket['read'] == 0 %}
+                                    Non
+                                {% else %}
+                                    Error!
+                                {% endif %}
+                            </td>
+                            <td class="text-end">
+                                {{ ticket['days_since_last_log'] }}
+                            </td>
+                            <td class="text-end">
+                                {{ ticket['days_since_creation'] }}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane fade show" id="transport_retour-tab-pane" role="tabpanel" aria-labelledby="transport_retour-tab" tabindex="0">
+            <h3>Instructions de traitement:</h3>
+            <p>Station a réussi la réparation ou admin a validé l'ANR. Transport retour à organiser?.</p>
+
+            <div>
+                <input class="searchInput input-group mb-3" data-table-id="sortableTable3" type="search" placeholder="Search" aria-label="Search" aria-target="sortableTable3">
+            </div>
+
+            <table class="table table-striped sortTable" id="sortableTable3">
+                <thead>
+                    <tr>
+                        <th class="text-start" data-type="number">Ticket</th>
+                        <th class="text-end">Machine</th>
+                        <th class="text-end">Contrat</th>
+                        <th class="text-end">Magasin</th>
+                        <th class="text-end">Station</th>
+                        <th class="text-end">Lu/Non-Lu</th>
+                        <th class="text-end" data-type="number">Jours depuis dernière action</th>
+                        <th class="text-end" data-type="number">Jours depuis création</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for ticket in openTicketList3 %}
+                        <tr>
+                            <td class="text-start">
+                                <a class="ticket_link" href="https://services.swap-europe.com/{{ticket['id']}}" target="_blank" rel="noopener noreferrer">{{ ticket['id'] }}</a>
+                            </td>
+                            <td class="text-end">
+                                {{ ticket['ref'] }}
+                            </td>
+                            <td class="text-end">
+                                {{ ticket['contrat'] }}
+                            </td>
+                            <td class="text-end">
+                                {% if ticket['distributeur'] %}
+                                {{ ticket['distributeur'] }}
+                                {% else %}
+                                    
+                                {% endif %}
+                            </td>
+                            <td class="text-end">
+                                {% if ticket['station'] %}
+                                {{ ticket['station'] }}
+                                {% else %}
+                                    
+                                {% endif %}
+                            </td>
+                            <td class="text-end">
+                                {% if ticket['read'] == 1 %}
+                                    Oui
+                                {% elif ticket['read'] == 0 %}
+                                    Non
+                                {% else %}
+                                    Error!
+                                {% endif %}
+                            </td>
+                            <td class="text-end">
+                                {{ ticket['days_since_last_log'] }}
+                            </td>
+                            <td class="text-end">
+                                {{ ticket['days_since_creation'] }}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane fade show" id="all_admin-tab-pane" role="tabpanel" aria-labelledby="all_admin-tab" tabindex="0">
+            <h3>Instructions de traitement:</h3>
+            <p>Tous les tickets administratifs.</p>
+
+            <div>
+                <input class="searchInput input-group mb-3" data-table-id="sortableTable4" type="search" placeholder="Search" aria-label="Search" aria-target="sortableTable4">
+            </div>
+
+            <table class="table table-striped sortTable" id="sortableTable4">
+                <thead>
+                    <tr>
+                        <th class="text-start" data-type="number">Ticket</th>
+                        <th class="text-end">Machine</th>
+                        <th class="text-end">Contrat</th>
+                        <th class="text-end">Magasin</th>
+                        <th class="text-end">Station</th>
+                        <th class="text-end">Lu/Non-Lu</th>
+                        <th class="text-end" data-type="number">Jours depuis dernière action</th>
+                        <th class="text-end" data-type="number">Jours depuis création</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for ticket in openTicketList30 %}
+                    <tr>
+                        <td class="text-start">
+                            <a class="ticket_link" href="https://services.swap-europe.com/{{ticket['id']}}" target="_blank" rel="noopener noreferrer">{{ ticket['id'] }}</a>
+                        </td>
+                        <td class="text-end">
+                            {{ ticket['ref'] }}
+                        </td>
+                        <td class="text-end">
+                            {{ ticket['contrat'] }}
+                        </td>
+                        <td class="text-end">
+                            {% if ticket['distributeur'] %}
+                            {{ ticket['distributeur'] }}
+                            {% else %}
+                                
+                            {% endif %}
+                        </td>
+                        <td class="text-end">
+                            {% if ticket['station'] %}
+                            {{ ticket['station'] }}
+                            {% else %}
+                                
+                            {% endif %}
+                        </td>
+                        <td class="text-end">
+                            {% if ticket['read'] == 1 %}
+                                Oui
+                            {% elif ticket['read'] == 0 %}
+                                Non
+                            {% else %}
+                                Error!
+                            {% endif %}
+                        </td>
+                        <td class="text-end">
+                            {{ ticket['days_since_last_log'] }}
+                        </td>
+                        <td class="text-end">
+                            {{ ticket['days_since_creation'] }}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</section>
+    
+{% endblock %}

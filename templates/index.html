@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  Overview
+{% endblock %}
+
+    <main>
+      {% block main %}
+      <form action="/index">
+        <section>
+          <h1>Overview</h1>
+
+          <section>
+            
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="main-tab-pane" role="tabpanel" aria-labelledby="main-tab" tabindex="0">
+                    
+                  <div class="side_by_side">
+
+                    <div class="index_table">
+
+                      <p> Répartition de tickets ouverts entre des admins. </p>
+
+                      <div>
+                        <input class="searchInput input-group mb-3" data-table-id="sortableTable1" type="search" placeholder="Search" aria-label="Search" aria-target="sortableTable1">
+                      </div>
+  
+                      <table class="table sortTable table-responsive" id="sortableTable1">
+                        <thead>
+                          <tr>
+                            <th scope="col">Admin</th>
+                            <th scope="col" data-type="number">Quantité de tickets ouverts: {{ total_sum }}</th>
+                            <th scope="col" data-type="number">LU: {{ total_lu }} </th>
+                            <th scope="col" data-type="number">NON LU: {{ total_non_lu }}</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {% for ticket in openTicketList %}
+                            <tr>
+                              <th scope="row">{{ ticket['ticket_admin'] }}</th>
+                              <td>{{ ticket['total_tickets'] }}</td>
+                              <td>{{ ticket['lu'] }}</td>
+                              <td>{{ ticket['non_lu'] }}</td>
+                            </tr>
+                          {% endfor %}
+                        </tbody>
+                      </table>
+                    </div>
+                      
+                    <div class="index_table">
+
+                      <p> Quantité de TOUS les logs par admin SAUF messages, passage en lu/non-lu ou action par un autre admin. </p>
+
+                      <div>
+                        <input class="searchInput input-group mb-3" data-table-id="sortableTable2" type="search" placeholder="Search" aria-label="Search" aria-target="sortableTable2">
+                      </div>
+  
+                      <table class="table sortTable table-responsive" id="sortableTable2">
+                        <thead>
+                          <tr>
+                            <th scope="col">Admin</th>
+                            <th scope="col" data-type="number">Quantité de logs: {{ logs_sum }}</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {% for ticket in openTicketList2 %}
+                            <tr>
+                              <th scope="row">{{ ticket['log_admin'] }}</th>
+                              <td>{{ ticket['logs_qty'] }}</td>
+                            </tr>
+                          {% endfor %}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        
+        </section>
+
+        </section>
+      {% endblock %}
+    </main>
+

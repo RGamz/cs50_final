@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Agent BS et Honda  
+{% endblock %}
+
+{% block main %}
+
+<section>
+    <h1>Agent BS et Honda</h1>
+
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="station_transport-tab" data-bs-toggle="tab" data-bs-target="#station_transport-tab-pane" type="button" role="tab" aria-controls="station_transport-tab-pane" aria-selected="true">Liste de tickets: <span class="bold">{{ openTicketCounter }}</span></button>
+        </li>
+    </ul>
+    
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="station_transport-tab-pane" role="tabpanel" aria-labelledby="station_transport-tab" tabindex="0">
+            <h3>Instructions de traitement:</h3>
+            <p>N'oubliez pas passer la demande de garantie chez Briggs (portail Briggs) ou Honda (envoyer formulaire à SGR). </p>
+
+            <div>
+                <input class="searchInput input-group mb-3" data-table-id="sortableTable1" type="search" placeholder="Search" aria-label="Search" aria-target="sortableTable1">
+            </div>
+
+            <table class="table table-striped sortTable" id="sortableTable1">
+                <thead>
+                    <tr>
+                        <th class="text-start" data-type="number">Ticket</th>
+                        <th class="text-end">Machine</th>
+                        <th class="text-end">Contrat</th>
+                        <th class="text-end">Magasin</th>
+                        <th class="text-end">Station</th>
+                        <th class="text-end">Lu/Non-Lu</th>
+                        <th class="text-end" data-type="number">Jours depuis dernière action</th>
+                        <th class="text-end" data-type="number">Jours depuis création</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for ticket in openTicketList %}
+                    <tr>
+                        <td class="text-start">
+                            <a class="ticket_link" href="https://services.swap-europe.com/{{ticket['id']}}" target="_blank" rel="noopener noreferrer">{{ ticket['id'] }}</a>
+                        </td>
+                        <td class="text-end">
+                            {{ ticket['ref'] }}
+                        </td>
+                        <td class="text-end">
+                            {{ ticket['contrat'] }}
+                        </td>
+                        <td class="text-end">
+                            {% if ticket['distributeur'] %}
+                            {{ ticket['distributeur'] }}
+                            {% else %}
+                                
+                            {% endif %}
+                        </td>
+                        <td class="text-end">
+                            {% if ticket['station'] %}
+                            {{ ticket['station'] }}
+                            {% else %}
+                                
+                            {% endif %}
+                        </td>
+                        <td class="text-end">
+                            {% if ticket['read'] == 1 %}
+                                Oui
+                            {% elif ticket['read'] == 0 %}
+                                Non
+                            {% else %}
+                                Error!
+                            {% endif %}
+                        </td>
+                        <td class="text-end">
+                            {{ ticket['days_since_last_log'] }}
+                        </td>
+                        <td class="text-end">
+                            {{ ticket['days_since_creation'] }}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</section>
+    
+{% endblock %}
